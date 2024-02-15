@@ -57,18 +57,6 @@ clevertap.onUserLogin.push({
         }
     </script>
 	
-clevertap.notifications.push({
-	"apnsWebPushId": "<apple web push id>",
-	"apnsWebPushServiceUrl": "<safari package service url>", 
-   	"titleText": "Would you like to receive Push Notifications?",
-   	"bodyText": "We promise to only send you relevant content and give you updates on your transactions",
-   	"okButtonText": "Sign me up!",
-   	"rejectButtonText": "No thanks",
-   	"okButtonColor":"#F28046",
-   	"askAgainTimeInSeconds":5,
-  	"serviceWorkerPath": "C:\Users\prathamesh\Downloads\Celebal Trainee\sw_webpush.js" // path to your custom service worker file
-  });
-importScripts('https://s3-eu-west-1.amazonaws.com/static.wizrocket.com/js/sw_webpush_only_registration.js');
 </head>
 <body>
   <p><i>This is CleverTap!!!</i></p>
