@@ -56,32 +56,7 @@ clevertap.onUserLogin.push({
             });
         }
     </script>
-//For Safari
-function requestPermission() {
-    if ('safari' in window && 'pushNotification' in window.safari) {
-
-        var permissionData =
-            window.safari.pushNotification.permission('web.pjay.push');
-        window.safari.pushNotification.requestPermission(
-            'https://localhost:8443/Push_notification_war_exploded',
-            'web.pjay.push', {}, function(subscription) {
-                console.log(subscription);
-                if(subscription.permission === 'granted') {
-                    subscriptionInfoSafari = subscription;
-                    safariToken = subscription.deviceToken;
-                    sending(safariToken);
-                    // updateSubscriptionOnServer(subscription);
-                }
-                else if(subscription.permission === 'denied') {
-                    // TODO:
-                }
-            });
-
-    } else {
-        alert("Push notifications not supported.");
-    }
-}
-
+	
 clevertap.notifications.push({
 	"apnsWebPushId": "<apple web push id>",
 	"apnsWebPushServiceUrl": "<safari package service url>", 
